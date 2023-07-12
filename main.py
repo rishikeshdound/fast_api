@@ -7,7 +7,7 @@
 #pip install fastapi uvicorn
 
 # 1. Library imports
-import uvicorn ##ASGI
+import uvicorn    ##ASGI gateway interface connection to server 
 from fastapi import FastAPI
 
 # 2. Create the app object
@@ -19,10 +19,11 @@ def index():
     return {'message': 'Hello, World'}
 
 # 4. Route with a single parameter, returns the parameter within a message
+
 #    Located at: http://127.0.0.1:8000/AnyNameHere
 @app.get('/Welcome')
 def get_name(name: str):
-    return {'Welcome To Krish Youtube Channel': f'{name}'}
+    return {'Welcome To my first api': f'{name}'}
 
 
 
